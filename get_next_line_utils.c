@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 04:34:08 by yeonhlee          #+#    #+#             */
-/*   Updated: 2020/07/13 18:21:54 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/03/11 19:32:36 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,34 +20,6 @@ size_t		ft_strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
-}
-
-char		*ft_strjoin(char *s, char *buf)
-{
-	char	*temp;
-	int		i;
-	int		j;
-
-	if (s == 0 || buf == 0)
-		return (0);
-	i = ft_strlen(s);
-	j = ft_strlen(buf);
-	if (!(temp = (char *)malloc(sizeof(char) * (i + j + 1))))
-		return (0);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		temp[i] = s[i];
-		i++;
-	}
-	j = 0;
-	while (buf[j] != '\0')
-	{
-		temp[i + j] = buf[j];
-		j++;
-	}
-	temp[i + j] = '\0';
-	return (temp);
 }
 
 char		*ft_strdup(const char *s)
